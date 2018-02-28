@@ -1,20 +1,16 @@
 package com.Myprograms;
 class me extends Thread
 {
-public int name,i;
+public int name;
+public static int t=1;
 public void run()
 {
-    for(i=1;i<=10;i++)
+    for(int i=1;i<=25;i++)
     {
-        System.out.println("Thread" + name + " : " + i);
-        try
-        {
-            sleep(1000);
-        }
-        catch(Exception e)
-        {
-            System.out.println("some problem");
-        }
+
+    	System.out.println("Thread" + name+ " : " + t);
+    	t++;
+   
     }
 }
 }
@@ -23,8 +19,8 @@ public class JustMthread {
 	{
 	    me a=new me();
 	    me b=new me();
-	    a.name=1;
-	    b.name=2;
+	   a.name=1;
+	   b.name=2;
 	    a.start();
 	    b.start();
 }
